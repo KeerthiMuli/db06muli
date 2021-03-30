@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  -
+    const park = [
+      {
+      'Name': "Dallas park",
+      'EntryFee': "50",
+      'City':"Dalls"
+      },
+       {
+      'Name': "Maryville park",
+      'EntryFee': "60",
+      'City':"Maryville"
+      },
+      {
+      'Name': "Kansas Park",
+      'EntryFee': "70",
+      'City':"Kansas"
+      },
+      ]
+  .container-fluid
+    div 
+      each par in park
+        .row
+        .row-name.col-sm-2= par.Name
+        .row-company.col-sm-2= par.EntryFee
+        .row-price.col-sm-2= par.City
