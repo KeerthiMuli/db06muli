@@ -6,7 +6,8 @@ block content
   button(type='button' class=`btn btn-secondary` onclick = 'update()' ) Press me
 
   div#target Result will be displayed here
-
+  - var url  = 'park';
+  a(href='/' + url) The parks
   script.
     var client_count = 0
     function update(){
