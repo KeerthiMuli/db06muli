@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  - let rows=Number(query.rows)
+  - let cols=Number(query.cols)
+  - if(Number.isInteger(rows) || Number.isInteger(cols)) {
+       p Rows and columns should be Integer values
+  - } else if (rows > 4) {
+        p rows cannot be greater than 4 
+  - } else if (rows > 4) {
+        p columns cannot be greater than 4 
+  - } 
+  - if((rows>=1 && rows<5)&&(cols>=1 && cols<5)){
+      table(id="outer" class="table table-responsive")
+        - for(let i=0;i<rows;i++){
+            tr#middle
+                - for(let s=0;s<cols;s++){
+                    td= i+s
+                - }
+        - }
+  - } 
