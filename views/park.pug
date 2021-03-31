@@ -20,10 +20,13 @@ block content
       'City':"Kansas"
       },
       ]
-  .container-fluid
-    div 
-      each par in park
-        .row
-        .row-name.col-sm-2= par.Name
-        .row-company.col-sm-2= par.EntryFee
-        .row-price.col-sm-2= par.City
+  div(class="container-fluid mt-3")
+  div(class="row")
+    each par,index in park
+      div(class="col-sm-2 "  onclick=`buy(${index})`) #{par.Name} - #{par.EntryFee} - #{par.City} 
+  script.
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }
+  
