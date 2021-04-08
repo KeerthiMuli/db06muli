@@ -2,24 +2,7 @@ extends layout
 
 block content
   h1= title
-  -
-    const park = [
-      {
-      'Name': "Dallas park",
-      'EntryFee': "50",
-      'City':"Dallas"
-      },
-       {
-      'Name': "Maryville park",
-      'EntryFee': "60",
-      'City':"Maryville"
-      },
-      {
-      'Name': "Kansas Park",
-      'EntryFee': "70",
-      'City':"Kansas"
-      },
-      ]
+  - let park=results
   div(class="container-fluid mt-3")
   div(class="row")
     each par,index in park
